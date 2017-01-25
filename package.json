@@ -1,5 +1,23 @@
 {
-    "devDependencies": {
-
+  "name": "AngularJSToDo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fidelhech/AngularJSToDo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fidelhech/AngularJSToDo/issues"
+  },
+  "homepage": "https://github.com/fidelhech/AngularJSToDo#readme",
+  "devDependencies": {
+    "angular": "^1.6.1"
   }
 }
