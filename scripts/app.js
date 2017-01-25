@@ -12,4 +12,9 @@ angular.module('todoListApp', [])
 		{'name': 'Fourth Todo'},
 		{'name': 'Fifth Todo'},
 	]
+
+	$scope.learningChange = function() {
+		console.log('Hello Learning Change().');
+	};
+
 });
