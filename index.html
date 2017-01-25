@@ -7,22 +7,26 @@
 	</head>
 	<body ng-app="todoListApp">
 
-		<!-- <hello-world></hello-world>		
-		<div hello-world></div>	
+		<!-- <hello-world></hello-world>
+		<div hello-world></div>
 		<div hello-world></div>	 -->
 
 		<h1>To Do App with AngularJS</h1>
 		<div ng-controller="mainCtrl" class="list">
-			<input type="checkbox">
-			<label class="editing-label" for="">A sample Todo.</label>
-			<input class="editing-label" type="text">
-			<div class="actions">
-				<a href="">edit</a>
-				<a href="" ng-click="helloWorld()">save</a>
-				<a href="" class="delete">delete</a>
+			<div ng-repeat="todo in todos">
+				<input ng-model="todo.completed" type="checkbox">
+				<label ng-hide="editing" class="editing-label" for="" ng-click="helloWorld()">{{todo.name}}</label>
+				<input ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
+				<div class="actions">
+					<a href="" ng-click=" editing = !editing ">edit</a>
+					<a href="" ng-click="helloWorld()">save</a>
+					<a href="" class="delete">delete</a>
+				</div>
 			</div>
+			<h3>Generated Code:</h3>
+			<pre>{{todos | json}}</pre>
 		</div>
-		
+
 		<script src="vendor/angular.min.js"></script>
 		<script src="scripts/app.js"></script>
 		<script src="scripts/hello-world.js"></script>
