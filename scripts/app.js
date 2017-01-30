@@ -1,8 +1,9 @@
 angular.module('todoListApp', [])
 .controller('mainCtrl', function($scope, dataService) {
 
-	$scope.helloWorld = function() {
-		console.log('Hello There! HelloWorld Controller in the MainCtrl.');
+	$scope.addTodo = function() {
+		var todo = {"name": "This a new Todo."};
+		$scope.todos.push(todo);
 	};
 
 	$scope.helloConsole = dataService.helloConsole;
